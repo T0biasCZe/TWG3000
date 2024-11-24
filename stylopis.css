@@ -1,0 +1,103 @@
+body {
+    max-width: 1080px;
+    margin: 0 auto;
+    margin-top: 50px;
+    background-color: #eaeaff;
+    color: black;
+    font-family: 'Segoe UI';
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 50px;
+    width: 100%;
+    /* Frutiger Aero gradient */
+    background: 
+        linear-gradient(to right, #02000fff 0%, #02000f00 3px, #a3fcff00 calc(100% - 3px), #a3fcffff 100%),
+        linear-gradient(to bottom, #a3fcff 0%, #00a6ff 10%, #1900ff 90%, #02000f 100%);
+    background-blend-mode: normal;
+}
+
+.header_cell {
+    width: 120px;
+    max-width: 120px;
+    height: 80%;
+    /* Center the text inside*/
+    text-align: center;
+    vertical-align: middle;
+
+
+    position: relative;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background: 
+        linear-gradient(to right, #02000fff 0%, #02000f00 3px, #a3fcff00 calc(100% - 3px), #a3fcffff 100%);
+
+}
+/*check if screen is horizontally smaller than 640px*/
+@media screen and (max-width: 640px) {
+    .header_cell {
+        width: 70px;
+        max-width: 70px;
+        min-width: 70px;
+        /*padding: 10px 20px;*/
+    }
+}
+.header_cell a, .header_cell a:visited, .header_cell a:link{
+    color: #ffffff;
+    text-decoration: none;
+}
+@media (pointer: course), (pointer: fine) {
+    .header_cell a, .header_cell a:visited, .header_cell a:link{
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+    }
+}
+
+.header_cell:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Adds a hover effect */
+}
+
+/* Dropdown menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #000000 !important;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd !important;
+}
+
+.header_cell:hover .dropdown-content {
+    display: block;
+}
+
+
+
+
+h3{
+    margin-top: -5px;
+    margin-bottom: 2px;
+}

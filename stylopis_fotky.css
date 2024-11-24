@@ -1,0 +1,136 @@
+body {
+    max-width: 1080px;
+    margin: 0 auto;
+    margin-top: 50px;
+    font-family: 'Segoe UI';
+    /*set the background to black with tiled gif ./vlajka.gif on top*/
+    background: #000010;
+    /*background-image: url(./gfx/vlajkadark.gif);
+
+    background-repeat: repeat;
+    background-size: 30px;*/
+
+    color: white;
+
+}
+
+@media screen and (max-width: 1040px) {
+    body {
+        margin-top: 0;
+        margin-left: 20px;
+    }
+}
+.obrazekContainerContainer{
+    width: min-content;
+}
+
+.obrazekContainerContainer .obrazek{
+    max-width: 90vw;
+    max-height: 30vh;
+}
+@media screen and (max-height: 600px) {
+    .obrazekContainerContainer .obrazek{
+        max-width: 90vw;
+        max-height: 60vh;
+    }
+}
+@media screen and (max-width: 640px) {
+    .obrazekContainerContainer .obrazek{
+        max-width: 90vw;
+        max-height: 90vh;
+    }
+}
+
+
+.time{
+    /*show the text under the image*/
+    display: inline;
+}
+.coordinates{
+    margin-top: -20px;
+    width: fit-content;
+    margin-right: 5px;
+    margin-left: auto;
+}
+.coordinates .spendlik{
+    /*show the image inside the text*/
+    display: inline;
+    width: 16px;
+    height: 20px;
+    /*make the image not shift the text*/
+    vertical-align: middle;
+}
+.coordinates a:visited, .coordinates a:link, .coordinates a:active{
+    color: white;
+} 
+
+
+.obrazekContainer .exifButton{
+    width: 32px;
+    height: 20px;
+    display: inline;
+    border: none;
+    background-color: transparent;
+}
+.obrazekContainer .exifButton img{
+    position: absolute;
+    margin-top: -20px;
+    margin-left: -12px;
+    width: 32px;
+    height: 32px;
+}
+.obrazekContainer .exifButton img:hover{
+    /*add glow css filter*/
+    filter: drop-shadow(0 0 5px #fff) brightness(1.2);
+}
+.obrazekContainer .exifButton img:active{
+    /*add glow css filter*/
+    filter: drop-shadow(0 0 8px #fff) brightness(0.6);
+}
+.download img:hover{
+    /*add glow css filter*/
+    filter: drop-shadow(0 0 5px #ff0000) brightness(1.2);
+}
+.download img:active{
+    /*add glow css filter*/
+    filter: drop-shadow(0 0 8px #ff0000) brightness(0.6);
+}
+
+h3 .download{
+    display: inline;
+    width: 1px;
+    height: 1px;
+    border: none;
+    background-color: transparent;
+}
+h3 .download img{
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+}
+
+.bigPreview{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+.bigPreview .closeButton{
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    width: 64px;
+    height: 64px;
+    border: none;
+    background-color: transparent;
+}
+.bigPreview .closeButton img{
+    width: 64px;
+    height: 64px;
+}
+.bigImage{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}

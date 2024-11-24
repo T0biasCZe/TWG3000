@@ -1,0 +1,31 @@
+<div class ="obrazekContainer">
+    <div>
+        <h3>TITLE <a href="DOWNLOADURL" target="_blank" class="download"><img src="./gfx/floppyred_download.png"></a></h3> 
+        <div class="obrazekContainerContainer">
+			<p style="margin-top: -25px; margin-bottom: 5px;">POPIS</p>
+            <img class="obrazek" src="PREVIEWSRC" alt="obrazek">
+            <br>
+            <div class="time">TIMETAKEN</div>
+            <div class="coordinates" class="display: inline">
+                <img class="spendlik" src="./gfx/spendlik_red.png" alt="pinicon">
+                <a href="MAPURL">COORDS</a>
+            </div>
+        </div>
+
+        <span>EXIF:</span> 
+        <button class="exifButton" onclick="(function(){
+            /*toggle display: none and block on the exif div*/
+            console.log('pičo');
+            var exif = this.parentElement.querySelector('.exif');
+            if (exif.style.display === 'none') {
+                exif.style.display = 'block';
+            } else {
+                exif.style.display = 'none';
+            }
+        }).call(this)"><img src="./gfx/DDORes_2553i_small.png"> </button>
+        <div class="exif" style="display: none;">
+            <span>EXIFPASTE</span>
+        </div>
+    </div>
+    <!--<a href="DOWNLOADURL" target="_blank" class="download"><img src="./gfx/floppyred_download.png"></a>-->
+</div>
